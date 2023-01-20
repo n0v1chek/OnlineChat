@@ -6,15 +6,19 @@ class BaseApp
 public:
     static BaseApp& Instance()
     {
-        static BaseApp s;
-        return s;
+       
+            if (!_baseApp)
+            {
+                _baseApp = new BaseApp;
+            }
+            return _baseApp;
     }
 
 private:
     BaseApp() {  }
     ~BaseApp() {  }
 
-
+    static BaseApp* _baseApp;
     BaseApp(BaseApp const&) = delete;
     BaseApp& operator= (BaseApp const&) = delete;
 };
