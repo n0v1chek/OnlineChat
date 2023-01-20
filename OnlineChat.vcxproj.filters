@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CLIBaseApp.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CLIMassege.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CLIPrivateUserData.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CLIUserData.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Massage.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivateUserData.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="UserData.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="hpp">
+      <UniqueIdentifier>{ab2029b0-89a7-4e99-a6b7-804553ada5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{8e69ecce-d1a4-4624-9840-68ed7165bc36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseApp.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="CLI.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="CLIBaseApp.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="CLIMassege.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="CLIPrivateUserData.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="CLIUserData.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Massege.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateUserData.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="UserData.h">
+      <Filter>hpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
