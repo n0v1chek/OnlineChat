@@ -1,10 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include"UserData.h"
-class PrivateUserData : public UserData {
-protected:
 
+#include"UserData.h"
+
+class PrivateUserData : public UserData 
+{
 public:
     PrivateUserData() = default;
     ~PrivateUserData() = default;

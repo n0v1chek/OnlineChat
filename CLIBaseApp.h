@@ -1,10 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include"CLI.h"
-class CLIBaseApp :public CLI {
-protected:
 
+#include"cli.h"
+
+class CLIBaseApp : public CLI 
+{
 public:
 	CLIBaseApp() = default;
 	~CLIBaseApp() = default;

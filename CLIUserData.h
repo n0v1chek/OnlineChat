@@ -1,10 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include"CLI.h"
-class CLIUserData :public CLI {
-protected:
 
+#include"cli.h"
+
+class CLIUserData : public CLI 
+{
 public:
 	CLIUserData() = default;
 	~CLIUserData() = default;

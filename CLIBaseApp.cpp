@@ -1,6 +1,6 @@
-#include<iostream>
-#include<string>
 #include"CLIBaseApp.h"
-CLIBaseApp::CLIBaseApp(const CLIBaseApp& other) {
+
+CLIBaseApp::CLIBaseApp(const CLIBaseApp& other) 
+{
 
 }

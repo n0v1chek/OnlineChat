@@ -1,11 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
-class CLI {
 
+class CLI
+{
 public:
 	
 	virtual ~CLI() = default;
-	
 };
 

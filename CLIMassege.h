@@ -1,10 +1,9 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include"CLI.h"
-class CLIMassege :public CLI {
-protected:
 
+#include"cli.h"
+
+class CLIMassege : public CLI 
+{
 public:
 	CLIMassege() = default;
 	~CLIMassege() = default;

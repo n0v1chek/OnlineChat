@@ -1,10 +1,8 @@
 #pragma once
-#include<iostream>
-#include<string>
 
-class Massege {
-protected:
 
+class Massege 
+{
 public:
     Massege() = default;
     ~Massege() = default;

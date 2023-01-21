@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CLIBaseApp.cpp" />
-    <ClCompile Include="CLIMassege.cpp" />
-    <ClCompile Include="CLIPrivateUserData.cpp" />
-    <ClCompile Include="CLIUserData.cpp" />
+    <ClCompile Include="BaseApp.cpp" />
+    <ClCompile Include="cli.cpp" />
+    <ClCompile Include="cliBaseApp.cpp" />
+    <ClCompile Include="cliMassege.cpp" />
+    <ClCompile Include="cliPrivateUserData.cpp" />
+    <ClCompile Include="cliUserData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Massage.cpp" />
     <ClCompile Include="PrivateUserData.cpp" />
@@ -150,11 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseApp.h" />
-    <ClInclude Include="CLI.h" />
-    <ClInclude Include="CLIBaseApp.h" />
-    <ClInclude Include="CLIMassege.h" />
-    <ClInclude Include="CLIPrivateUserData.h" />
-    <ClInclude Include="CLIUserData.h" />
+    <ClInclude Include="cli.h" />
+    <ClInclude Include="cliBaseApp.h" />
+    <ClInclude Include="cliMassege.h" />
+    <ClInclude Include="cliPrivateUserData.h" />
+    <ClInclude Include="cliUserData.h" />
     <ClInclude Include="Massege.h" />
     <ClInclude Include="PrivateUserData.h" />
     <ClInclude Include="UserData.h" />
