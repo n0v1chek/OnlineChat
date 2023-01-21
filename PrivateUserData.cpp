@@ -1,6 +1,6 @@
 #include"PrivateUserData.h"
 
-PrivateUserData::PrivateUserData(const PrivateUserData& other) 
+PrivateUserData::PrivateUserData(const std::string& name, const std::string& login)
+	: _pData(name, login)
 {
-
 }

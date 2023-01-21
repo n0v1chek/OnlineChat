@@ -1,10 +1,10 @@
 #pragma once
 
-class UserData 
+#include "PrivateUserData.h"
+
+class UserData : public PrivateUserData
 {
 public:
-    UserData() = default;
-    ~UserData() = default;
-    UserData(const UserData& other);
+    UserData(const std::string& name, const std::string& login);
 
 };
