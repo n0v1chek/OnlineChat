@@ -146,7 +146,7 @@
     <ClCompile Include="cliPrivateUserData.cpp" />
     <ClCompile Include="cliUserData.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Massage.cpp" />
+    <ClCompile Include="massage.cpp" />
     <ClCompile Include="PrivateUserData.cpp" />
     <ClCompile Include="UserData.cpp" />
   </ItemGroup>
@@ -157,7 +157,7 @@
     <ClInclude Include="cliMassege.h" />
     <ClInclude Include="cliPrivateUserData.h" />
     <ClInclude Include="cliUserData.h" />
-    <ClInclude Include="Massege.h" />
+    <ClInclude Include="massege.h" />
     <ClInclude Include="PrivateUserData.h" />
     <ClInclude Include="UserData.h" />
   </ItemGroup>

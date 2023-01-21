@@ -5,15 +5,17 @@
 
 class BaseApp
 {
-public:
-    static BaseApp* Instance();
-
-    ~BaseApp();
 private:
     BaseApp();
 
     BaseApp(BaseApp const&) = delete;
     BaseApp& operator= (BaseApp const&) = delete;
+
+public:
+    ~BaseApp();
+
+public:
+    static BaseApp* instance();
 
 private:
     static std::unique_ptr<BaseApp> _instance;

@@ -5,8 +5,6 @@
 class CLIPrivateUserData : public CLI 
 {
 public:
-	CLIPrivateUserData() = default;
-	~CLIPrivateUserData() = default;
-	CLIPrivateUserData(const CLIPrivateUserData& other);
+	void help() override;
 
 };

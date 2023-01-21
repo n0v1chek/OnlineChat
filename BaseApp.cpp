@@ -1,7 +1,11 @@
 #include "BaseApp.h"
 
+BaseApp::~BaseApp()
+{
+}
+
 std::unique_ptr<BaseApp> BaseApp::_instance = nullptr;
-BaseApp* BaseApp::Instance()
+BaseApp* BaseApp::instance()
 {
     if (!_instance)
     {
@@ -14,6 +18,3 @@ BaseApp::BaseApp()
 {
 }
 
-BaseApp::~BaseApp()
-{
-}

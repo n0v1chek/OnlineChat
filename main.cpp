@@ -1,9 +1,40 @@
+#include <iostream>
 
 #include "BaseApp.h"
+#include "cliBaseApp.h"
+
+void start()
+{
+	CLIBaseApp cliBaseApp;
+
+	while (1)
+	{
+		std::system("cls");
+		cliBaseApp.help();
+
+		int answer;
+		std::cin >> answer;
+
+		switch (answer)
+		{
+		case 1:
+			cliBaseApp.signIn();
+			break;
+
+		case 2:
+			cliBaseApp.signUp();
+			break;
+
+		case 0:
+			exit(0);
+
+		default:
+			break;
+		}
+	}
+}
 
 auto main() -> int
 {
-	BaseApp::Instance();
-
-	return 0;
+	start();
 }
