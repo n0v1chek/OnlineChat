@@ -1,8 +1,7 @@
 #pragma once
 
-class UserData {
-protected:
-
+class UserData 
+{
 public:
     UserData() = default;
     ~UserData() = default;

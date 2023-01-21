@@ -1,13 +1,13 @@
 #include "BaseApp.h"
 
-BaseApp* BaseApp::_instance = nullptr;
+std::unique_ptr<BaseApp> BaseApp::_instance = nullptr;
 BaseApp* BaseApp::Instance()
 {
     if (!_instance)
     {
-        _instance = new BaseApp;
+        _instance = static_cast<std::unique_ptr<BaseApp>>(new BaseApp);
     }
-    return _instance;
+    return _instance.get();
 }
 
 BaseApp::BaseApp() 
@@ -15,5 +15,5 @@ BaseApp::BaseApp()
 }
 
 BaseApp::~BaseApp()
-{ 
+{
 }
