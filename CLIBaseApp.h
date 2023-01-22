@@ -1,9 +1,10 @@
 #pragma once
-
+#include <map>
+#include <string>
 #include "BaseApp.h"
 #include "cli.h"
 
-class CLIBaseApp : public CLI 
+class CLIBaseApp : public CLI
 {
 public:
 	CLIBaseApp();
@@ -16,6 +17,8 @@ public:
 
 private:
 	BaseApp* _baseApp;
-
+	std::string password;
+	std::string login;
+	std::map <std::string, std::string>User; // создали типа журнал
 
 };
