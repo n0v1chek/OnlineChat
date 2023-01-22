@@ -7,4 +7,7 @@ class CLIMassege : public CLI
 public:
 	void help() override;
 
+
+	
+
 };

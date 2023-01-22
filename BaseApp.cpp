@@ -19,6 +19,11 @@ void BaseApp::addUser(const UserData& ud)
     _usersData.push_back(ud);
 }
 
+bool BaseApp::isExist(const std::string& login)
+{
+    return false;
+}
+
 BaseApp::BaseApp() 
 {
 }

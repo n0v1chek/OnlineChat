@@ -21,10 +21,11 @@ public:
     static BaseApp* instance();
 
     void addUser(const UserData& ud);
+    bool isExist(const std::string& login);
 
 private:
     static std::unique_ptr<BaseApp> _instance;
-    std::vector<UserData> _usersData;
+    std::vector<UserData> _usersData;  // вектор пользователей
 
 };
 

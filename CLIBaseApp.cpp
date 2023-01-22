@@ -30,6 +30,11 @@ void CLIBaseApp::signUp()
         std::cout << "Login: ";
         std::cin >> login;
 
+        if (_baseApp->isExist(login))
+        {
+
+        }
+
         std::cout << "Password: ";
         std::cin >> password;
 
