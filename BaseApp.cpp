@@ -14,6 +14,11 @@ BaseApp* BaseApp::instance()
     return _instance.get();
 }
 
+void BaseApp::addUser(const UserData& ud)
+{
+    _usersData.push_back(ud);
+}
+
 BaseApp::BaseApp() 
 {
 }

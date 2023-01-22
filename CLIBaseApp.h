@@ -17,8 +17,5 @@ public:
 
 private:
 	BaseApp* _baseApp;
-	std::string password;
-	std::string login;
-	std::map <std::string, std::string>User; // создали типа журнал
 
 };

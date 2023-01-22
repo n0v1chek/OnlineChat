@@ -13,11 +13,7 @@ CLIBaseApp::~CLIBaseApp()
 
 void CLIBaseApp::signIn()
 {
-    std::cout << "Login: ";
-    std::cin >> login;
-    std::cout << "Password : ";
-    std::cin >> password;
-    User[login] = password;
+    
 }
 
 
@@ -26,15 +22,21 @@ void CLIBaseApp::signIn()
 
 void CLIBaseApp::signUp()
 {
+    std::string login, password;
 
-    for (int i = 0; i < 1; i++) {
+    while (true)
+    {
 
-        std::cout << i << "Login: ";
+        std::cout << "Login: ";
         std::cin >> login;
+
         std::cout << "Password: ";
-        std::cin >> password;  // считываем введенные значения
-        User.insert(make_pair(login, password));
+        std::cin >> password;
+
+
     }
+
+    _baseApp->addUser(UserData(login, password));
 }
 
 void CLIBaseApp::help()

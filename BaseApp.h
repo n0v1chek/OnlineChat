@@ -2,6 +2,9 @@
 
 #include <memory>
 #include <iostream>
+#include <vector>
+
+#include "UserData.h"
 
 class BaseApp
 {
@@ -17,9 +20,12 @@ public:
 public:
     static BaseApp* instance();
 
+    void addUser(const UserData& ud);
+
 private:
     static std::unique_ptr<BaseApp> _instance;
-    
+    std::vector<UserData> _usersData;
+
 };
 
 

@@ -5,6 +5,6 @@
 class UserData : public PrivateUserData
 {
 public:
-    UserData(const std::string& name, const std::string& login);
+    UserData(const std::string& login, const std::string& password);
 
 };
