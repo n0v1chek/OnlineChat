@@ -33,11 +33,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="hpp">
-      <UniqueIdentifier>{ab2029b0-89a7-4e99-a6b7-804553ada5ae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cpp">
       <UniqueIdentifier>{8e69ecce-d1a4-4624-9840-68ed7165bc36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hpp">
+      <UniqueIdentifier>{ab2029b0-89a7-4e99-a6b7-804553ada5ae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
