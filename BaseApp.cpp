@@ -1,5 +1,4 @@
 #include "BaseApp.h"
-
 BaseApp::~BaseApp()
 {
 }
@@ -31,18 +30,23 @@ void BaseApp::addUser(const UserData& ud)
 
 bool BaseApp::isLogin(const std::string& login)
 {
-
-    // реализовать если в базе даных есть юзер с таким именем
-
-    return true;
+    for (int i = 0; i < _usersData.size(); ++i)
+    {
+        if (_usersData[i].getLogin() == login)
+            return true;
+    } 
+    return false;
 }
-
 bool BaseApp::isPassword(const std::string& password)
 {
 
-    // реализовать если в базе даных есть юзер с таким паролем
-
-    return true;
+    for (int i = 0; i < _usersData.size(); ++i)
+    {
+        if (_usersData[i].getPassword() == password)
+            return true;
+    }
+    return false;
+   
 }
 
 UserData* BaseApp::findUser(const std::string& login)

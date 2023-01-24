@@ -84,7 +84,7 @@ void CLIBaseApp::signUp()
     {
         std::tie(login, password) = cliPrivateUserData.getLoginAndPass();
 
-        if (!_baseApp->isLogin(login))
+        if (_baseApp->isLogin(login))
         {
             std::cout << "User with \"" << login << "\" login doesn't exist";
             std::system("pause");
