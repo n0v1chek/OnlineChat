@@ -1,8 +1,8 @@
-#include"CLIBaseApp.h"
+#include "CLIBaseApp.h"
 #include <map>
 #include <string>
 CLIBaseApp::CLIBaseApp()
-    : _baseApp(BaseApp::instance())
+    : _baseApp(BaseApp::instance()), _current(nullptr)
 {
 }
 
@@ -23,7 +23,7 @@ void CLIBaseApp::signIn()
 
         if (!_baseApp->isLogin(login) && !_baseApp->isPassword(password))
         {
-            std::cout << "Incorrect input";
+            std::cout << "Incorrect input\n";
             std::system("pause");
 
             continue;
@@ -33,11 +33,12 @@ void CLIBaseApp::signIn()
         break;
     }
 
-    _baseApp->setCurrent(_baseApp->findUser(login));
+    _current = _baseApp->findUser(login);
 
+    _baseApp->setCurrent(_current);
 
-    CLIUserData cliUserData;
-    CLIMassege cliMessage;
+    CLIUserData cliUserData(_current);
+    CLIMessage cliMessage(_current);
 
     while (true)
     {
@@ -51,7 +52,6 @@ void CLIBaseApp::signIn()
         switch (answer)
         {
         case 1:
-
             cliMessage.mainMenu();
 
             break;

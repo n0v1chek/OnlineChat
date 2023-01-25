@@ -13,7 +13,7 @@
     <ClCompile Include="cliUserData.cpp">
       <Filter>cpp</Filter>
     </ClCompile>
-    <ClCompile Include="massage.cpp">
+    <ClCompile Include="message.cpp">
       <Filter>cpp</Filter>
     </ClCompile>
     <ClCompile Include="PrivateUserData.cpp">
@@ -59,7 +59,7 @@
     <ClInclude Include="cliUserData.h">
       <Filter>hpp</Filter>
     </ClInclude>
-    <ClInclude Include="massege.h">
+    <ClInclude Include="message.h">
       <Filter>hpp</Filter>
     </ClInclude>
     <ClInclude Include="PrivateUserData.h">

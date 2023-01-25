@@ -29,6 +29,9 @@ public:
 
     UserData* findUser(const std::string& login);
 
+    void printChat(const std::string& chatName);
+    void sendMessage(const Message& message, const std::string& receiver);
+
 private:
     static std::unique_ptr<BaseApp> _instance;
 
