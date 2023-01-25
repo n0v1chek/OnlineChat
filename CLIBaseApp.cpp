@@ -23,10 +23,13 @@ void CLIBaseApp::signIn()
 
         if (!_baseApp->isLogin(login) && !_baseApp->isPassword(password))
         {
-            std::cout << "Incorrect input\n";
+            std::cout << "Incorrect input, we will send you to the registration form\n";
             std::system("pause");
-
-            continue;
+            std::system("cls");
+            std::cout << "Enter your desired username and password!\n";
+            std::system("pause");
+            CLIBaseApp::signUp();
+            
         }
 
 
@@ -77,19 +80,23 @@ void CLIBaseApp::signIn()
 
 void CLIBaseApp::signUp()
 {
+   
     std::string login, password;
     CLIPrivateUserData cliPrivateUserData;
-
+    
     while (true)
     {
         std::tie(login, password) = cliPrivateUserData.getLoginAndPass();
-
+        
         if (_baseApp->isLogin(login))
         {
             std::cout << "User with \"" << login << "\" login doesn't exist";
             std::system("pause");
-
-            continue;
+            std::system("cls");
+            std::cout << "We will return you to main menu!\n";
+            std::system("pause");
+            CLIBaseApp::help();
+            
         }
 
         
