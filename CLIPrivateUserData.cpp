@@ -1,4 +1,9 @@
-#include"CLIPrivateUserData.h"
+#include "CLIPrivateUserData.h"
+
+CLIPrivateUserData::CLIPrivateUserData()
+    : _baseApp(BaseApp::instance())
+{
+}
 
 std::pair<std::string, std::string> CLIPrivateUserData::getLoginAndPass()
 {

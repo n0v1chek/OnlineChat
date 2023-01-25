@@ -1,11 +1,11 @@
 #pragma once
 #include <map>
 #include <string>
-#include "BaseApp.h"
 #include "cli.h"
 #include "cliPrivateUserData.h"
 #include "cliUserData.h"
 #include "cliMassege.h"
+#include "BaseApp.h"
 
 class CLIBaseApp : public CLI
 {
@@ -20,5 +20,5 @@ public:
 
 private:
 	BaseApp* _baseApp;
-
+	UserData* _current;
 };
