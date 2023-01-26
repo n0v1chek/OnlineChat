@@ -128,12 +128,18 @@ void CLIMessage::mutualChat()
 
 void CLIMessage::sendToALl()
 {
+	std::cout << "Your messange in general chat: ";
+	std::string message;
 
+	std::cin.ignore();
+	std::getline(std::cin, message);
+
+	_baseApp->sendMessage(Message(_current->getLogin(), message));
 }
 
 void CLIMessage::generalChat()
 {
-
+	_baseApp->printChat();
 }
 
 void CLIMessage::help()

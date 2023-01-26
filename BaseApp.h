@@ -29,8 +29,10 @@ public:
 
     UserData* findUser(const std::string& login);
 
-    void printChat(const std::string& chatName);
-    void sendMessage(const Message& message, const std::string& receiver);
+    void printChat(const std::string& chatName); // print concrete chat
+    void printChat(); // print general chat
+    void sendMessage(const Message& message, const std::string& receiver); // send to concrete chat
+    void sendMessage(const Message& message); // send to general chat
 
 private:
     static std::unique_ptr<BaseApp> _instance;
@@ -38,7 +40,7 @@ private:
     std::vector<UserData> _usersData;  // вектор пользователей
     UserData* _currentUser;
     
-
+    std::vector<Message> _generalChat;
 };
 
 
