@@ -128,6 +128,8 @@ void CLIMessage::mutualChat()
 
 void CLIMessage::sendToALl()
 {
+	std::system("cls");
+
 	std::cout << "Your messange in general chat: ";
 	std::string message;
 
