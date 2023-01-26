@@ -51,6 +51,8 @@ void CLIMessage::sendToSomebody()
 {
 	std::string receiver;
 	std::string message;
+
+	CLIUserData cliUserData;
 	
 	while (true)
 	{
@@ -64,7 +66,8 @@ void CLIMessage::sendToSomebody()
 			std::system("cls");
 			std::cout << receiver << " have never been registered!\n";
 
-			std::system("pause");
+			if (!cliUserData.isContinue())
+				return;
 
 			continue;
 		}
@@ -74,7 +77,8 @@ void CLIMessage::sendToSomebody()
 			std::system("cls");
 			std::cout << "You can't send a message to yourself!\n";
 
-			std::system("pause");
+			if (!cliUserData.isContinue())
+				return;
 
 			continue;
 		}
@@ -93,6 +97,9 @@ void CLIMessage::sendToSomebody()
 void CLIMessage::mutualChat()
 {
 	std::string chatName; 
+
+	CLIUserData cliUserData;
+
 	while (true)
 	{
 		std::system("cls");
@@ -105,7 +112,8 @@ void CLIMessage::mutualChat()
 			std::system("cls");
 			std::cout << chatName << " have never been registered!\n";
 
-			std::system("pause");
+			if (!cliUserData.isContinue())
+				return;
 
 			continue;
 		}
@@ -115,7 +123,8 @@ void CLIMessage::mutualChat()
 			std::system("cls");
 			std::cout << "You can't send a message to yourself!\n";
 
-			std::system("pause");
+			if (!cliUserData.isContinue())
+				return;
 
 			continue;
 		}

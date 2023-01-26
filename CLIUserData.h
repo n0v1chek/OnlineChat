@@ -10,7 +10,11 @@
 class CLIUserData : public CLI 
 {
 public:
+	CLIUserData();
 	CLIUserData(UserData* current);
+
+	bool isContinue();
+	void setCurrent(UserData* current);
 
 	void help() override;
 	
