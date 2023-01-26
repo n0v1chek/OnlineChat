@@ -1,9 +1,31 @@
 #include "CLIUserData.h"
 
+CLIUserData::CLIUserData()
+	: _baseApp(BaseApp::instance()), _current(nullptr)
+{
+}
+
 CLIUserData::CLIUserData(UserData* current)
 	: _baseApp(BaseApp::instance()), _current(current)
 {
 	
+}
+
+bool CLIUserData::isContinue()
+{
+	std::cout << "\n\nDo you wanna return back?(y/n): ";
+	char answer;
+
+	std::cin >> answer;
+	if (answer == 'n' || answer == 'N')
+		return false;
+
+	return true;
+}
+
+void CLIUserData::setCurrent(UserData* current)
+{
+	_current = current;
 }
 
 void CLIUserData::help()

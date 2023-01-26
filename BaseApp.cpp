@@ -68,10 +68,39 @@ void BaseApp::printChat(const std::string& chatName)
 
     auto messages = _currentUser->getMessages()[chatName];
 
-    for (int i = 0; i < messages.size(); ++i)
+    if (messages.size() == 0)
     {
-        std::cout << messages[i].getName() << ": " << messages[i].getMessage() << "\n";
+        std::cout << "This chat is empty, send him a message!\n";
     }
+    else
+    {
+        for (int i = 0; i < messages.size(); ++i)
+        {
+            std::cout << messages[i].getName() << ": " << messages[i].getMessage() << "\n";
+        }
+    }
+    
+
+    std::system("pause");
+}
+
+void BaseApp::printChat()
+{
+    std::system("cls");
+
+
+    if (_generalChat.size() == 0)
+    {
+        std::cout << "This chat is empty, send him a message!\n";
+    }
+    else
+    {
+        for (int i = 0; i < _generalChat.size(); ++i)
+        {
+            std::cout << _generalChat[i].getName() << ": " << _generalChat[i].getMessage() << "\n";
+        }
+    }
+
 
     std::system("pause");
 }
@@ -82,6 +111,11 @@ void BaseApp::sendMessage(const Message& message, const std::string& receiver)
 
     findUser(sender)->getMessages()[receiver].push_back(message);
     findUser(receiver)->getMessages()[sender].push_back(message);
+}
+
+void BaseApp::sendMessage(const Message& message)
+{
+    _generalChat.push_back(message);
 }
 
 BaseApp::BaseApp() 

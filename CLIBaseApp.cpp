@@ -16,6 +16,7 @@ void CLIBaseApp::signIn()
     std::string login, password;
 
     CLIPrivateUserData cliPrivateUserData;
+    CLIUserData cliUserData;
 
     while (true)
     {
@@ -23,13 +24,14 @@ void CLIBaseApp::signIn()
 
         if (!_baseApp->isLogin(login) && !_baseApp->isPassword(password))
         {
-            std::cout << "Incorrect input, we will send you to the registration form\n";
-            std::system("pause");
             std::system("cls");
-            std::cout << "Enter your desired username and password!\n";
-            std::system("pause");
-            CLIBaseApp::signUp();
-            
+
+            std::cout << "Incorrect input\n";
+
+            if (!cliUserData.isContinue())
+                return;
+
+            continue;
         }
 
 
@@ -40,7 +42,7 @@ void CLIBaseApp::signIn()
 
     _baseApp->setCurrent(_current);
 
-    CLIUserData cliUserData(_current);
+    cliUserData.setCurrent(_current);
     CLIMessage cliMessage(_current);
 
     while (true)
@@ -83,6 +85,7 @@ void CLIBaseApp::signUp()
    
     std::string login, password;
     CLIPrivateUserData cliPrivateUserData;
+    CLIUserData cliUserData;
     
     while (true)
     {
@@ -90,13 +93,14 @@ void CLIBaseApp::signUp()
         
         if (_baseApp->isLogin(login))
         {
-            std::cout << "User with \"" << login << "\" login doesn't exist";
-            std::system("pause");
             std::system("cls");
-            std::cout << "We will return you to main menu!\n";
-            std::system("pause");
-            CLIBaseApp::help();
+
+            std::cout << "User with \"" << login << "\" login doesn't exist";
             
+            if (!cliUserData.isContinue())
+                return;
+
+            continue;
         }
 
         
