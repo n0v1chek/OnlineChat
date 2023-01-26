@@ -1,3 +1,4 @@
+#include <limits>
 #include "CLIUserData.h"
 
 CLIUserData::CLIUserData()
@@ -15,7 +16,14 @@ bool CLIUserData::isContinue()
 {
 	std::cout << "\n\nDo you wanna return back?(y/n): ";
 	char answer;
+	if (char(std::cin.peek()) == '\n')
+		std::cin.ignore();
 
+	if (std::cin.fail())
+	{
+		std::cin.clear();
+		std::cin.ignore(32767, '\n');
+	}
 	std::cin >> answer;
 	if (answer == 'n' || answer == 'N')
 		return false;
