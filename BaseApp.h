@@ -6,6 +6,7 @@
 
 #include "UserData.h"
 
+
 class BaseApp
 {
 private:
@@ -29,15 +30,15 @@ public:
 
     UserData* findUser(const std::string& login);
 
-    void printChat(const std::string& chatName); // print concrete chat
-    void printChat(); // print general chat
+    void printChat(const std::string& chatName);                           // print concrete chat
+    void printChat();                                                      // print general chat
     void sendMessage(const Message& message, const std::string& receiver); // send to concrete chat
-    void sendMessage(const Message& message); // send to general chat
+    void sendMessage(const Message& message);                              // send to general chat
 
 private:
     static std::unique_ptr<BaseApp> _instance;
 
-    std::vector<UserData> _usersData;  // вектор пользователей
+    std::vector<UserData> _usersData;  // vector of users
     UserData* _currentUser;
     
     std::vector<Message> _generalChat;

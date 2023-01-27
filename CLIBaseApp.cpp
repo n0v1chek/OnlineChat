@@ -1,6 +1,5 @@
 #include "CLIBaseApp.h"
-#include <map>
-#include <string>
+
 CLIBaseApp::CLIBaseApp()
     : _baseApp(BaseApp::instance()), _current(nullptr)
 {
@@ -9,7 +8,6 @@ CLIBaseApp::CLIBaseApp()
 CLIBaseApp::~CLIBaseApp()
 {
 }
-
 
 void CLIBaseApp::signIn()
 {
@@ -67,8 +65,6 @@ void CLIBaseApp::signIn()
             break;
         case 3:
 
-            // back( need to be cleared )
-
             return;
         case 0:
 
@@ -82,7 +78,6 @@ void CLIBaseApp::signIn()
 
 void CLIBaseApp::signUp()
 {
-   
     std::string login, password;
     CLIPrivateUserData cliPrivateUserData;
     CLIUserData cliUserData;
