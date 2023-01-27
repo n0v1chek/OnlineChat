@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "BaseApp.h"
 #include "cliBaseApp.h"
 
-void start()
+
+auto main() -> int
 {
 	CLIBaseApp cliBaseApp;
 
@@ -32,9 +32,4 @@ void start()
 			break;
 		}
 	}
-}
-
-auto main() -> int
-{
-	start();
 }

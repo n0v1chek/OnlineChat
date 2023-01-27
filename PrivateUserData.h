@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include <vector>
+
 #include "message.h"
 
 class PrivateUserData

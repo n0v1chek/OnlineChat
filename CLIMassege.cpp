@@ -85,7 +85,7 @@ void CLIMessage::sendToSomebody()
 
 		std::cout << "Your messege to " << receiver << ": ";
 		std::cin.ignore();
-		std::getline(std::cin, message); // ошибки нет) 
+		std::getline(std::cin, message);
 
 
 		break;
