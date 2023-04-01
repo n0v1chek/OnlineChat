@@ -1,4 +1,4 @@
-#include "CLIBaseApp.h"
+#include "CliBaseApp.h"
 
 CLIBaseApp::CLIBaseApp()
     : _baseApp(BaseApp::instance()), _current(nullptr)
@@ -20,7 +20,7 @@ void CLIBaseApp::signIn()
     {
         std::tie(login, password) = cliPrivateUserData.getLoginAndPass();
 
-        if (!_baseApp->isLogin(login) && !_baseApp->isPassword(password))
+        if (!_baseApp->verifyUserData(login,password))//if (!_baseApp->isLogin(login) && !_baseApp->isPassword(password))
         {
             std::system("cls");
 
@@ -76,7 +76,7 @@ void CLIBaseApp::signIn()
 }
 
 
-void CLIBaseApp::signUp()
+void CLIBaseApp::signUp() const
 {
     std::string login, password;
     CLIPrivateUserData cliPrivateUserData;

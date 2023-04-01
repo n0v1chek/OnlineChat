@@ -1,8 +1,5 @@
 #include "BaseApp.h"
 
-BaseApp::~BaseApp()
-{
-}
 
 std::unique_ptr<BaseApp> BaseApp::_instance = nullptr;
 BaseApp* BaseApp::instance()
@@ -14,7 +11,7 @@ BaseApp* BaseApp::instance()
     return _instance.get();
 }
 
-UserData* BaseApp::getCurrent()
+UserData* BaseApp::getCurrent() const
 {
     return _currentUser;
 }
@@ -26,38 +23,43 @@ void BaseApp::setCurrent(UserData* userData)
 
 void BaseApp::addUser(const UserData& ud)
 {
-    _usersData.push_back(ud);
+    _usersData[ud.getLogin()] = ud;
 }
 
-bool BaseApp::isLogin(const std::string& login)
+bool BaseApp::isLogin(const std::string& login) const
 {
-    for (int i = 0; i < _usersData.size(); ++i)
-    {
-        if (_usersData[i].getLogin() == login)
-            return true;
-    } 
+    if (_usersData.find(login) != _usersData.end())
+        return true;
 
     return false;
 }
-bool BaseApp::isPassword(const std::string& password)
+bool BaseApp::isPassword(const std::string& password) const
 {
 
-    for (int i = 0; i < _usersData.size(); ++i)
+    for (const auto& i : _usersData)
     {
-        if (_usersData[i].getPassword() == password)
+        if (i.second.getPassword() == password)
             return true;
     }
 
     return false;
+}
+
+
+bool BaseApp::verifyUserData(const std::string& login, const std::string& password) {
+    if (_usersData.find(login) == _usersData.end())
+        return false;
+    else if (_usersData.at(login).getPassword() == password)
+        return true;
+    else return false;
 }
 
 UserData* BaseApp::findUser(const std::string& login)
 {
-    for (int i = 0; i < _usersData.size(); ++i)
-    {
-        if (_usersData[i].getLogin() == login)
-            return &_usersData[i];
-    }
+    auto ud = _usersData.find(login);
+
+    if (ud != _usersData.end())
+        return &ud->second;
 
     return nullptr;
 }
@@ -68,7 +70,7 @@ void BaseApp::printChat(const std::string& chatName)
 
     auto messages = _currentUser->getMessages()[chatName];
 
-    if (messages.size() == 0)
+    if (messages.empty())
     {
         std::cout << "This chat is empty, send him a message!\n";
     }
@@ -119,6 +121,6 @@ void BaseApp::sendMessage(const Message& message)
 }
 
 BaseApp::BaseApp() 
-    : _currentUser(nullptr)
+    : _usersData(), _currentUser(nullptr), _generalChat()
 {
 }
