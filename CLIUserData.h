@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "cli.h"
+#include "Cli.h"
 #include "UserData.h"
 #include "BaseApp.h"
 
@@ -11,7 +11,7 @@ class CLIUserData : public CLI
 {
 public:
 	CLIUserData();
-	CLIUserData(UserData* current);
+	explicit CLIUserData(UserData* current);
 
 	bool isContinue();
 	void setCurrent(UserData* current);

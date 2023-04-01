@@ -1,6 +1,11 @@
-#include "message.h"
+#include "Message.h"
 
-Message::Message(std::string name, std::string message)
+Message::Message()
+	: _message()
+{
+}
+
+Message::Message(const std::string& name, const std::string& message)
 	: _message(name, message)
 {
 
